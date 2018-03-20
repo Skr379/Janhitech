@@ -1,8 +1,8 @@
 # Janhitech
 
-Centralised, Nationalised and Secure Repository of Medical Records linked to AADHAAR.
+#Centralised, Nationalised and Secure Repository of Medical Records linked to AADHAAR.
 
-SUMMARY:
+#SUMMARY:
 The proposed solution is a centralised repository of all the medical records linked to Aadhaar of a citizen. Hadoop is used to store 
 the bigdata. Deep neural nets for analysis. RESTful APIs to seamlessly decouple logic layer from Frontend(Angular4+).
 A doctor can access the medical records of a person by taking his/her approval(OTP authentication to the registered mobile
@@ -12,7 +12,7 @@ insights from patterns observed through the modelled data. The quality of diagno
 cases of wrongful diagnosis will be greatly reduced. 
 
 
-PROBLEM STATEMENT:
+#PROBLEM STATEMENT:
 This problem is related to how the medical history of the people is handled by various hospitals. In the age of digitalisation, when 
 something abstract such as education to something representational such as a currency has been digitalised to a great depth, we still 
 see a very important domain of healthcare still being handled non-centralised, non-digitalised in a great sense. The problem statement 
@@ -26,7 +26,7 @@ e slower. Further, the lack of centralisation of these medical records depending
 turmoil hindering any efficient analysis.
 
 
-TECH STACK:
+#TECH STACK:
 
 1. Front End: HTML5, CSS3, JavaScript on Angular 4+ framework.
 2. MiddleWare(Database): JVM based RESTful API server.
