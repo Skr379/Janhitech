@@ -1,0 +1,104 @@
+clientConfiguration:
+    timeout: 20000ms
+    connectionTimeout: 20000ms
+    timeToLive: 1 hour
+    cookiesEnabled: true
+    maxConnections: 1024
+    maxConnectionsPerRoute: 1024
+    keepAlive: 0s
+    minThreads: 1
+    maxThreads: 128
+    gzipEnabled: false
+    gzipEnabledForRequests: false
+server:
+  applicationConnectors:
+  - type: http
+    port: 9000
+    acceptorThreads: 1
+    outputBufferSize: 32KB
+    inputBufferSize: 8KB
+    maxRequestHeaderSize: 8KB
+    maxResponseHeaderSize: 8KB
+    reuseAddress: true
+    soLingerTime: null
+    useServerHeader: false
+    useDateHeader: true
+    useForwardedHeaders: true
+    bindHost: null
+
+  adminConnectors:
+  - type: http
+    port: 9051
+
+  minThreads: 8
+  maxThreads: 1024
+  idleThreadTimeout: 200s
+  shutdownGracePeriod: 5s
+
+  gzip:
+    enabled: true
+    minimumEntitySize: 256 bytes
+    bufferSize: 8KiB
+    compressedMimeTypes: []
+
+  requestLog:
+    type: classic
+    appenders:
+    - type: file
+      timeZone: IST
+      currentLogFilename: /var/log/access.log
+      logFormat: default
+      archive: true
+      maxFileSize: 200MB
+      archivedLogFilenamePattern: /var/log/access-%i.log.gz
+      archivedFileCount: 5
+    - type: console
+      logFormat: default
+
+logging:
+  level: INFO
+  loggers:
+    org.hibernate.stat: DEBUG
+    org.hibernate.SQL: ALL
+    org.hibernate.type: ALL
+  appenders:
+  - type : console
+  - type : file
+    threshold: ALL
+    timeZone: IST
+    archive: true
+    maxFileSize: 200MB
+    archivedFileCount: 5
+    archivedLogFilenamePattern: /var/log/flipkart/supply-chain/retail-proc/root-%i.log.gz
+    currentLogFilename: /var/log/flipkart/supply-chain/retail-proc/root.log
+    logFormat: "%highlight(%-5level) [%yellow(%date)] [%thread] [%X{reqId}] [%X{txnId}] [%cyan(%logger{0})]: %message%n"
+
+databaseConfiguration:
+  # the name of your JDBC driver
+  driverClass: com.mysql.jdbc.Driver
+  # the username
+  user: finley
+    # the password
+  password: password
+  # the JDBC URL
+  url: jdbc:mysql://127.0.0.1:3306/proc_b2b_development
+  # any properties specific to your JDBC driver:
+  properties:
+    charSet: UTF-8
+  # the maximum amount of time to wait on an empty pool before throwing an exception
+  maxWaitForConnection: 1s
+
+  # the SQL query to run when validating a connection's liveness
+  validationQuery: "/* MyService Health Check */ SELECT 1"
+
+  # the minimum number of connections to keep open
+  minSize: 8
+
+  # the maximum number of connections to keep open
+  maxSize: 32
+
+  # whether or not idle connections should be validated
+  checkConnectionWhileIdle: true
+
+  validationInterval: 10s
+  minIdleTime: 1 minute
