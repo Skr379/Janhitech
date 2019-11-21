@@ -15,14 +15,13 @@ cases of wrongful diagnosis will be greatly reduced.
 ### **PROBLEM STATEMENT:**
 This problem is related to how the medical history of the people is handled by various hospitals. In the age of digitalisation, when 
 something abstract such as education to something representational such as a currency has been digitalised to a great depth, we still 
-see a very important domain of healthcare still being handled non-centralised, non-digitalised in a great sense. The problem statement 
+see a very important domain of healthcare being handled non-centralised, non-digitalised in a great sense. The problem statement 
 can be seen by taking a very general example as follows:
 An old man comes to a hospital with pain in his chest for the past few days. Now, the doctor has to give him medicines based on his
 medical history because the prescriptions can have side effects depending on the previous and current ailments that the person has. 
 But the patient might not be having all the previous records of his diagnosis and might miss some important details while providing
 a verbal record. Now the doctor does some scans and finds out the patient has X, and armed with the half-baked knowledge provided by 
-the patient, he/she provides a diagnosis which can cause further complications, may not treat the patient or the effect of it can b
-e slower. Further, the lack of centralisation of these medical records depending upon the hospital of origination leads to a state of
+the patient, he/she provides a diagnosis which can cause further complications, may not treat the patient or the effect of it can be slower. Further, the lack of centralisation of these medical records depending upon the hospital of origination leads to a state of
 turmoil hindering any efficient analysis.
 
 
